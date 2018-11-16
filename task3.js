@@ -1,44 +1,47 @@
-  const users1 =  {
+const users = {
+  1: {
+    name: 'Roman',
+    lastName: 'Lurov',
+    otherData: {
+      role: 'student'
+    }
+  },
+  2: {
     name: 'Ivan',
     lastName: 'Bondarenko',
     otherData: {
-    role: 'student'
-    }
-}
-  console.log('name:users1.',users1.name);
-
-
-
-    const users2 =  {
-      name: 'Ivan',
-      lastName: 'Bondarenko',
-      otherData: {
       role: 'student'
     }
-}
-    console.log('lastName:users2.',users2.lastName);
-
-
-    const users3 =  {
-      name: 'Roman',
-      lastName: 'Lurov',
-      otherData: {
-      role: 'student',
-    } 
-}
-    console.log('otherData:users3.',users3.otherData);
-
-    const users4 =  {
-      name: 'Oleg',
-      lastName: 'Murko',
-      otherData: {
+  },
+  3: {
+    name: 'Roman',
+    lastName: 'Lurov',
+    otherData: {
       role: 'student'
     }
-}
-    console.log('name:users4.',users4.lastName);
-
-    const users5 =  {
-      name: 'Kurz',
-      lastName: 'Smith'
+  },
+  
+  4: {
+    name: 'Oleg',
+    lastName: 'Murko',
+    otherData: {
+      role: 'student'
+    }
+  },
+  
+  5: {
+    name: 'Kurz',
+    lastName: 'Smith'
+  }
 };
-    console.log('name:users5.',users4.name);
+
+  Object.keys(users).forEach(function(key) {
+    const user = users[key];
+  
+  if(user.hasOwnProperty('otherData')) {
+     console.log('name: ', user.name);
+     console.log('last name: ', user.lastName);
+     console.log('role: ', user.otherData.role)
+  } else 
+  console.log('not enough information');
+});
